@@ -1,0 +1,156 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    margin: 0px auto; /* Neste caso o auto vai ajustar automaticamente a margem nas laterais para que o conteúdo fique centralizado */
+}
+
+#page-create-point header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#page-create-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex; /* Para deixar todo o conteúdo que está dentro da tag link (incluindo o span) lado a lado */
+    align-items: center; /* Para centralizar o conteúdo da tag a */
+}
+
+#page-create-point header a span {
+    background-image: url('../assets/icones/arrow-left.svg');
+    width: 20px;
+    height: 23px;
+    display: flex; /* Para que a imagem apareça */
+    margin-right: 16px;
+}
+
+#page-create-point form {
+    background-color: #fff;
+    padding: 64px;
+    margin: 80px auto; /* Deixa a margem esquerda e direita com o tamaho dividido entre elas (automático) */
+    border-radius: 8px;
+    max-width: 730px;
+}
+
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    border: 0; /* Remove a borda do fieldset do formulário */
+}
+
+form legend {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form legend span {
+    color: var(--title-color);
+    font-size: 14px;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    flex: 1; /* Para o conteúdo ocupar o espaço por igual */
+}
+
+form .field-group {
+    display: flex;
+}
+
+form input, form select {
+    background-color: #f0f0f5;
+    border: 0px;
+    padding: 16px 24px;
+    font-size: 16px;
+    /* outline: none; /* Retira a linha preta envolta do campo quando você apera nele */
+    border-radius: 8px;
+}
+
+form select {
+    -webkit-appearance: none; /* Retira a setinha do campo 'select' */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field { /* Pega o .field que estiver depois de um .field */
+    margin-left: 24px;
+}
+
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0px;
+    margin-top: 40px;
+    transition: 400ms;
+}
+
+form button:hover {
+    background-color: background-color #2fb86e;
+}
+
+/*      JS --> OBSSRVAÇÕES
+    document sempre se refere ao documento que a gente está usando (html) */
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px; /* gap funciona como o margin mas é específico para o display: grid; Ele faz a separação entre os elementos */
+}
+
+.items-grid li {
+    background-color: #f5f5f5;
+    list-style: none;
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+    height: 180px;
+    padding: 32px 24px 16px;
+    display: flex; /* Para alinhar os itens dentro da li */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+}
+
+.items-grid li span {
+    flex: 1; /* Para ter um tamanho que preenche sozinho */
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+    margin-top: 12px;
+}
+
+.items-grid li.selected { /* '.items-grid li.selected' é diferente de '.items-grid li .selected' */
+    background-color: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none; /* Remove eventos de pointer | O evento de pointer está sendo removido para poder pegar somente a li no javascript (create-point.js) | Evita eventos de clique do mouse */
+}

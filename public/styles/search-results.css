@@ -1,0 +1,89 @@
+body {
+    background-color: #fff;
+}
+
+#page-search-results {
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    margin: 0px auto; /* Neste caso o auto vai ajustar automaticamente a margem nas laterais para que o conteúdo fique centralizado */
+}
+
+#page-search-results header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#page-search-results header a {
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex; /* Para deixar todo o conteúdo que está dentro da tag link (incluindo o span) lado a lado */
+    align-items: center; /* Para centralizar o conteúdo da tag a */
+}
+
+#page-search-results header a span {
+    background-image: url('../assets/icones/arrow-left.svg');
+    width: 20px;
+    height: 23px;
+    display: flex; /* Para que a imagem apareça */
+    margin-right: 16px;
+}
+
+main {
+    margin: 48px 0;
+}
+
+main h4 {
+    font-weight: normal;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 32px;
+}
+
+main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Para que tenha 3 colunas que dividam seu espaço igualmente entre si */
+    gap: 24px;
+}
+
+main .card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px 8px 0px 0px;
+    object-fit: cover; /* Vai preencher todo o espaço com a imagem */
+}
+
+main .card h1 {
+    margin-top: 32px;
+    font-size: 36px;
+    line-height: 41px;
+    color: #322153;
+}
+
+main .card h3 {
+    margin: 24px 0;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--primary-color); /* #34cb79 */
+}
+
+main .card p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #6c6c80;
+}
+
+body::after { /* Não existe na página mas o css criou */
+    content: "";
+    position: absolute;
+    background-color: #f0f0f5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 16rem;
+    z-index: -1; /* Para ele ficar atrás do conteúdo do body */
+}

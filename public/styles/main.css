@@ -1,0 +1,35 @@
+:root { /* Referencia a raiz do documento html e aqui eu posso colocar algumas propriedades que vão poder ser repetidas/replicadas em formato de variáveis */
+    --title-color: #322153; /* Agora posso usar esse nome no decorrer do meu documento inteiro */
+    --primary-color: #34cb79;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* BOX MODEL */
+
+    /* display: block; --> Ocupa a linha inteira e joga o próximo elemento para baixo */
+    /* display: inline; --> Ocupa somente o tamanho da caixa (conteúdo) */
+    /* display: flex; --> Coloca os elemenos da caixa (por exemplo, div) um ao lado do outro */
+        /* Obs: Por fora o display: flex; é block */

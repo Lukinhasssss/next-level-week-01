@@ -1,0 +1,50 @@
+@media (max-width: 900px) { /* De 0 até 900 recebe a regra abaixo */
+    #page-home {
+        background-position-x: 80vw; /* Para sumir a imagem, pois ela ficará para a direita */
+    }
+
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Jogando o 'cadastre um ponto de coleta' lá para baixo da página */
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #page-home main {
+        align-items: center;
+    }
+
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #page-search-results .cards img {
+        height: 250px;
+    }
+
+    #page-create-point .field-group {
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field { /* Ou seja, um field que tiver um field ao lado */
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 1700px) { /* Quando a largura mínima da tela for de 1440px vai aplicar os estilos abaixo */
+    #page-home {
+        background-position-x: 40vw; /* Para sumir a imagem, pois ela ficará para a direita */
+    }
+}
+
+@media (max-height: 760px) { /* Aplica estilo enquanto a altura for de 0px à 760px */
+    #page-home {
+        background-position-y: 200px; /* Para sumir a imagem, pois ela ficará para a direita */
+    }
+}

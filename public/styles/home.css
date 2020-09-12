@@ -1,0 +1,95 @@
+#page-home {
+    height: 100vh; /* 100% do viewport */
+    background: url('../assets/icones/home-background.svg') no-repeat;
+    background-position: 35vw bottom; /* 1º parametro faz a configuração do eixo x | 2º parametro joga a imagem para baixo */
+}
+
+#page-home .content {
+    width: 90%;
+    max-width: 1100px; /* Se a largura for até 1100px se adapta aos 90% */
+    margin: 0px auto; /* Para que a margem nas laterais fique automática */
+    height: 100%;
+    display: flex; /* Vai deixar todos os elementos um ao lado do outro */
+    flex-direction: column; /* Deixa um conteúdo por coluna */
+}
+
+#page-home header {
+    display: flex;
+    align-items: center; /* Alinha os itens em relação ao eixo x */
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#page-home header a {
+    display: flex;
+    color: var(--title-color);
+    font-weight: 700;
+    /* text-decoration: none; Vou jogar isso em uma tag a para aplicar a todos os links */
+}
+
+#page-home header a span {
+    background-image: url('../assets/icones/log-in.svg');
+    width: 20px;
+    height: 20px;
+    display: flex; /* Para mostrar a imagem */
+    margin-right: 16px;
+}
+
+#page-home main {
+    max-width: 560px;
+    /* height: 600px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1; /* Preenche o conteúdo automaticamente em todo o espaço que ele tiver */
+}
+
+#page-home main h1 {
+    font-size: 54px;
+}
+
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px; /* Altura da liha do texto */
+    margin-top: 24px;
+}
+
+#page-home main a {
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    background-color: var(--primary-color);
+    transition: 400ms;
+}
+
+#page-home main a:hover {
+    background-color: #2fb86e;
+}
+
+#page-home main a span {
+    width: 72px;
+    height: 72px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-home main a span::after { /* Adicionando imagem de fundo no span */
+    content: "";
+    background-image: url('../assets/icones/search.svg');
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main a strong {
+    flex: 1; /* Faz crescer toda a caixa */
+    color: #fff;
+    text-align: center; /* Centraliza o texto da caixa */
+}
